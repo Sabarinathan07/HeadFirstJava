@@ -1,10 +1,10 @@
-package chap06;
-//import helpers.GameHelper;
+
+
 
 import java.util.*;
 
 public class DotComBust {
-//    private GameHelper helper = new GameHelper();
+   private GameHelper helper = new GameHelper();
    private ArrayList<DotCom> dotComsList = new ArrayList<DotCom>();
    private int numOfGuesses = 0;
 
@@ -74,6 +74,7 @@ public class DotComBust {
    public static void main(String[] args) {
        DotComBust game = new DotComBust();
        game.setUpGame();
+       System.out.println("  ");
        game.startPlaying();
    }
 }
