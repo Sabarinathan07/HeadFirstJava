@@ -1,4 +1,4 @@
-package chap16;
+
 
 import java.util.*;
 import java.io.*;
@@ -24,7 +24,9 @@ public class Jukebox1
             while ((line = reader.readLine()) != null) {
                 addSong(line);
             }
-        } catch (Exception ex) { ex.printStackTrace(); }
+        } catch (Exception ex) {
+            System.out.println("I'm in catch block");
+            ex.printStackTrace(); }
     }
     
     void addSong(String lineToParse) {
