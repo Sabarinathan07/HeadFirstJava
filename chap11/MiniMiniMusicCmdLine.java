@@ -1,6 +1,8 @@
-package chap11;
+
 import javax.sound.midi.*;
 
+//  java MiniMiniMusicCmdLine 80 20 
+// java MiniMiniMusicCmdLine 100 10
 
 public class MiniMiniMusicCmdLine {   // this is the first one
        

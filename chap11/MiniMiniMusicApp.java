@@ -1,4 +1,4 @@
-package chap11;
+
 import javax.sound.midi.*;
 
 
@@ -34,11 +34,20 @@ public class MiniMiniMusicApp {   // this is the first one
           track.add(noteOn);
 
           ShortMessage b = new ShortMessage();
-          b.setMessage(128, 1, 44, 100);
+          b.setMessage(130, 1, 120, 2);
           MidiEvent noteOff = new MidiEvent(b, 16); // <-- means at tick one, the above event happens
           track.add(noteOff);
-        
+         //  track.add(noteOn);
+         //  track.add(noteOff);
          // add the events to the track
+         ShortMessage c = new ShortMessage();
+         c.setMessage(192, 1, 120, 10);
+         MidiEvent noteTwo = new MidiEvent(c, 32); // <-- means at tick one, the above event happens
+         track.add(noteTwo);
+
+   
+
+     
             
           // add the sequence to the sequencer, set timing, and start
           sequencer.setSequence(seq);
@@ -48,7 +57,10 @@ public class MiniMiniMusicApp {   // this is the first one
           Thread.sleep(1000);
           sequencer.close();
           System.exit(0);
-      } catch (Exception ex) {ex.printStackTrace();}
+       } catch (Exception ex) {
+          ex.printStackTrace();
+            System.out.println("exception");
+         }
   } // close play
 
 } // close class
